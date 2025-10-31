@@ -1,0 +1,14 @@
+Theme Screenshot Placeholder
+
+To add a theme screenshot:
+1. Create a PNG image 1200x900 pixels
+2. Name it "screenshot.png"
+3. Place it in the theme root directory: wp-content/themes/itskanal/
+4. This will appear in Appearance → Themes
+
+The screenshot should show the homepage design of the iTS KANAL website.
+
+You can use the original site's screenshot or create one after the site is fully set up by:
+1. Taking a full-page screenshot of the homepage
+2. Cropping it to 1200x900 pixels
+3. Saving as screenshot.png

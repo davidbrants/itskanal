@@ -1,0 +1,68 @@
+# WordPress Core Files
+/wp-admin/
+/wp-includes/
+/wp-content/index.php
+/wp-content/languages
+/wp-content/plugins/index.php
+/wp-content/upgrade/
+/wp-content/uploads/
+*.log
+
+# WordPress Config
+wp-config.php
+.htaccess
+
+# Theme Development
+/wp-content/themes/itskanal/node_modules/
+/wp-content/themes/itskanal/package-lock.json
+/wp-content/themes/itskanal/assets/css/style.css
+
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE Files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Temporary Files
+*~
+*.swp
+*.swo
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build
+dist/
+build/
+
+# Database
+*.sql
+*.sqlite
+
+# Backup Files
+*.bak
+*.backup
+*-backup-*
+
+# Cache
+.cache/
+wp-content/cache/
+
+# Advanced Custom Fields
+acf-json/
+
+# Miscellaneous
+error_log
+debug.log

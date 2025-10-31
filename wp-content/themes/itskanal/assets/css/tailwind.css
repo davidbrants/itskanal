@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-dm-sans text-gray-900;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-jost font-bold;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-its-blue hover:bg-its-blue-dark text-white font-semibold py-3 px-8 rounded-lg transition-all duration-300 inline-block;
+  }
+
+  .btn-secondary {
+    @apply bg-white hover:bg-gray-100 text-its-blue font-semibold py-3 px-8 rounded-lg transition-all duration-300 inline-block border-2 border-its-blue;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24 lg:py-32;
+  }
+
+  .container-custom {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Partner Logos Scrolling Animation */
+  .partner-logos-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background: white;
+  }
+
+  .partner-logos-track {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 4rem;
+    animation: scroll-logos 40s linear infinite;
+    width: max-content;
+    padding: 1rem 0;
+  }
+
+  .partner-logo-item {
+    flex-shrink: 0;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 160px;
+  }
+
+  .partner-logo-item img {
+    max-height: 140px;
+    max-width: 380px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: brightness(0) saturate(100%) invert(10%) sepia(98%) saturate(6943%) hue-rotate(247deg) brightness(93%) contrast(143%);
+    opacity: 1;
+  }
+
+  @keyframes scroll-logos {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .partner-logo-item {
+      width: 280px;
+      height: 120px;
+    }
+
+    .partner-logo-item img {
+      max-height: 100px;
+      max-width: 260px;
+    }
+
+    .partner-logos-track {
+      gap: 2.5rem;
+      animation: scroll-logos 30s linear infinite;
+    }
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-in;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+  }
+
+  .service-card {
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-slide-in-left {
+    animation: slideInLeft 0.5s ease-out;
+  }
+
+  .animate-slide-in-right {
+    animation: slideInRight 0.5s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  /* WCAG 2.1 AA Compliance */
+  .focus-visible-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-its-blue focus:ring-offset-2;
+  }
+
+  /* Skip to main content link for accessibility */
+  .skip-to-main {
+    @apply absolute -top-full left-0 bg-its-blue text-white px-4 py-2 z-50;
+    @apply focus:top-0 transition-all;
+  }
+
+  /* Ensure sufficient color contrast for links */
+  a {
+    @apply focus:outline-none focus:ring-2 focus:ring-its-blue focus:ring-offset-2 rounded-sm;
+  }
+
+  /* Reduce motion for users who prefer it */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
