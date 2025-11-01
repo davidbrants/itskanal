@@ -24,7 +24,7 @@ if (!defined('ABSPATH')) {
 <div id="page" class="min-h-screen flex flex-col">
 
     <!-- Top Header Bar -->
-    <div class="bg-white/80 backdrop-blur-md border-b border-white/20 hidden md:block">
+    <div class="top-header-bar hidden md:block">
         <div class="container-custom">
             <div class="flex justify-between items-center py-2 text-sm">
                 <div class="flex items-center space-x-6">
