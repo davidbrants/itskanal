@@ -37,7 +37,7 @@ npm install -g @railway/cli
 # Login to Railway
 railway login
 
-# Run automated deployment
+# Run automated deployment 
 ./deploy-railway.sh
 ```
 
