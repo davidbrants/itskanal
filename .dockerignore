@@ -1,0 +1,14 @@
+# Only exclude these from Docker build
+node_modules
+.git
+*.md
+.DS_Store
+database-backup.sql
+docker-compose.yml
+Dockerfile
+start.sh
+stop.sh
+.env
+
+# NOTE: DO NOT exclude wp-admin, wp-includes, wp-config.php, or .htaccess
+# These are needed in the container!

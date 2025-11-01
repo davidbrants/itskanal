@@ -1,0 +1,47 @@
+# Railway Ignore File
+# Files and directories to exclude from Railway deployment
+
+# Node modules
+node_modules/
+**/node_modules/
+
+# Development files
+.git/
+.gitignore
+.DS_Store
+.vscode/
+.idea/
+*.log
+
+# Docker local development
+docker-compose.yml
+.env
+Dockerfile
+start.sh
+stop.sh
+
+# Documentation (optional, comment out if you want docs deployed)
+*.md
+!README.md
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+*~
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Build artifacts
+*.map
+
+# WordPress development
+wp-content/upgrade/
+wp-content/cache/
+wp-content/backup*/
+wp-content/debug.log
+
+# Large media files during deployment (upload separately via FTP)
+# wp-content/uploads/
