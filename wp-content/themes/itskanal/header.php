@@ -24,7 +24,7 @@ if (!defined('ABSPATH')) {
 <div id="page" class="min-h-screen flex flex-col">
 
     <!-- Top Header Bar -->
-    <div class="bg-gray-100 border-b border-gray-200 hidden md:block">
+    <div class="bg-white/80 backdrop-blur-md border-b border-white/20 hidden md:block">
         <div class="container-custom">
             <div class="flex justify-between items-center py-2 text-sm">
                 <div class="flex items-center space-x-6">
@@ -58,7 +58,7 @@ if (!defined('ABSPATH')) {
     </div>
 
     <!-- Main Header -->
-    <header id="masthead" class="site-header bg-white shadow-md sticky top-0 z-50">
+    <header id="masthead" class="site-header bg-white/90 backdrop-blur-lg shadow-lg shadow-gray-200/50 sticky top-0 z-50 border-b border-white/30">
         <div class="container-custom">
             <div class="flex justify-between items-center py-4">
 
@@ -104,7 +104,7 @@ if (!defined('ABSPATH')) {
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="lg:hidden hidden bg-white border-t border-gray-200">
+        <div id="mobile-menu" class="lg:hidden hidden bg-white/95 backdrop-blur-lg border-t border-white/30">
             <div class="container-custom py-4">
                 <?php
                 if (has_nav_menu('primary')) {
