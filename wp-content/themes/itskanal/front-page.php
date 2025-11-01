@@ -48,30 +48,30 @@ get_header();
         <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12" style="color: #0024BE;">
             <span style="color: #0024BE;">ERFOLG</span> <span style="color: #00BCD4;">DURCH PARTNERSCHAFT</span>
         </h2>
-        <div class="partner-logos-slider relative">
-            <div class="partner-logos-track">
-                <?php
-                $partner_logos = array(
-                    array('file' => 'grabner.png', 'name' => 'Kanal Grabner'),
-                    array('file' => 'kuenzli.png', 'name' => 'Groupe Künzli'),
-                    array('file' => 'lt.png', 'name' => 'LT Rohrexperten'),
-                    array('file' => 'restclean.png', 'name' => 'RestClean'),
-                    array('file' => 'alpe.png', 'name' => 'ALPE'),
-                    array('file' => 'feucht.png', 'name' => 'Feucht GmbH'),
-                    array('file' => 'arelt.png', 'name' => 'ARELT'),
-                );
+    </div>
+    <div class="partner-logos-slider relative">
+        <div class="partner-logos-track">
+            <?php
+            $partner_logos = array(
+                array('file' => 'grabner.png', 'name' => 'Kanal Grabner'),
+                array('file' => 'kuenzli.png', 'name' => 'Groupe Künzli'),
+                array('file' => 'lt.png', 'name' => 'LT Rohrexperten'),
+                array('file' => 'restclean.png', 'name' => 'RestClean'),
+                array('file' => 'alpe.png', 'name' => 'ALPE'),
+                array('file' => 'feucht.png', 'name' => 'Feucht GmbH'),
+                array('file' => 'arelt.png', 'name' => 'ARELT'),
+            );
 
-                // Duplicate logos for seamless loop
-                $all_logos = array_merge($partner_logos, $partner_logos);
+            // Duplicate logos for seamless loop
+            $all_logos = array_merge($partner_logos, $partner_logos);
 
-                foreach ($all_logos as $logo) :
-                    $logo_url = get_template_directory_uri() . '/assets/images/partners/' . $logo['file'];
-                ?>
-                <div class="partner-logo-item">
-                    <img src="<?php echo esc_url($logo_url); ?>" alt="<?php echo esc_attr($logo['name']); ?>" loading="lazy">
-                </div>
-                <?php endforeach; ?>
+            foreach ($all_logos as $logo) :
+                $logo_url = get_template_directory_uri() . '/assets/images/partners/' . $logo['file'];
+            ?>
+            <div class="partner-logo-item">
+                <img src="<?php echo esc_url($logo_url); ?>" alt="<?php echo esc_attr($logo['name']); ?>" loading="lazy">
             </div>
+            <?php endforeach; ?>
         </div>
     </div>
 </section>
