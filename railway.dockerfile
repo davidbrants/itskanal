@@ -19,8 +19,20 @@ RUN docker-php-ext-configure gd --with-freetype --with-jpeg --with-webp \
 # Enable Apache modules
 RUN a2enmod rewrite expires headers deflate
 
-# Copy only our custom theme and plugins (WordPress core already exists in base image)
+# Install Node.js for building CSS
+RUN curl -fsSL https://deb.nodesource.com/setup_20.x | bash - \
+    && apt-get install -y nodejs \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy theme source files
 COPY --chown=www-data:www-data ./wp-content/themes/itskanal /var/www/html/wp-content/themes/itskanal
+
+# Build theme CSS
+WORKDIR /var/www/html/wp-content/themes/itskanal
+RUN npm install && npm run build
+
+# Copy plugins
+WORKDIR /var/www/html
 COPY --chown=www-data:www-data ./wp-content/plugins /var/www/html/wp-content/plugins
 
 # Copy health check
