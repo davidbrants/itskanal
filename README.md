@@ -12,6 +12,7 @@ A professional WordPress replica of itskanal.com built with Tailwind CSS.
 - **Fast Performance**: Optimized assets and caching
 - **Easy Content Management**: WordPress block editor support with ACF fields
 - **Multilingual Ready**: Structure prepared for WPML or Polylang integration
+- **Railway Deployment**: Full support for Railway PaaS deployment
 
 ## Tech Stack
 
@@ -20,6 +21,38 @@ A professional WordPress replica of itskanal.com built with Tailwind CSS.
 - Custom Theme: "iTS KANAL"
 - PHP 8.0+
 - MySQL 5.7+ or MariaDB 10.3+
+- Docker support (local development)
+- Railway deployment ready
+
+## Quick Start
+
+### Railway Deployment (Recommended for Production)
+
+Deploy to Railway in ~15 minutes:
+
+```bash
+# Install Railway CLI
+npm install -g @railway/cli
+
+# Login to Railway
+railway login
+
+# Run automated deployment
+./deploy-railway.sh
+```
+
+See **[RAILWAY_DEPLOYMENT.md](RAILWAY_DEPLOYMENT.md)** for complete guide.
+
+### Local Development (Docker)
+
+```bash
+# Start local environment
+./start.sh
+
+# Visit: http://localhost:8000
+```
+
+See **[DOCKER.md](DOCKER.md)** for Docker setup.
 
 ## Installation
 
