@@ -129,12 +129,18 @@ RUN { \
     echo 'expose_php = Off'; \
     } > /usr/local/etc/php/conf.d/railway-wordpress.ini
 
+# Copy custom entrypoint for Railway port handling
+COPY --chmod=755 docker-entrypoint.sh /usr/local/bin/railway-entrypoint.sh
+
 # Set working directory
 WORKDIR /var/www/html
 
-# Expose port
+# Expose port (Railway will override with $PORT)
 EXPOSE 80
 
 # Health check
 HEALTHCHECK --interval=30s --timeout=10s --start-period=60s --retries=3 \
     CMD curl -f http://localhost/health-check.php || exit 1
+
+# Use custom entrypoint
+ENTRYPOINT ["/usr/local/bin/railway-entrypoint.sh"]
