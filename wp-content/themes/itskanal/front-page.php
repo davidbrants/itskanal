@@ -18,14 +18,14 @@ get_header();
     <div class="absolute inset-0">
         <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/header-hero.webp'); ?>"
              alt="iTS KANAL Services"
-             class="w-full h-full object-cover object-right">
+             class="w-full h-full object-cover object-center lg:object-right">
     </div>
 
-    <!-- Smart gradient overlay: dark on left (text area), transparent on right (kid visible) -->
-    <div class="absolute inset-0 bg-gradient-to-r from-its-blue-dark via-its-blue/80 to-transparent lg:from-its-blue-dark lg:via-its-blue/70 lg:to-transparent"></div>
+    <!-- Desktop gradient: dark on left (text area), transparent on right (kid visible) -->
+    <div class="hidden lg:block absolute inset-0 bg-gradient-to-r from-its-blue-dark via-its-blue/70 to-transparent"></div>
 
-    <!-- Mobile-specific darker gradient at bottom for text readability -->
-    <div class="absolute inset-0 bg-gradient-to-t from-its-blue-dark/95 via-its-blue/60 to-transparent lg:hidden"></div>
+    <!-- Mobile gradient: lighter at top (image visible), darker at bottom (text readable) -->
+    <div class="lg:hidden absolute inset-0 bg-gradient-to-t from-its-blue-dark/90 via-its-blue/40 via-50% to-transparent"></div>
 
     <div class="container-custom relative z-10 py-24 md:py-32 lg:py-40">
         <div class="max-w-4xl lg:max-w-2xl">
