@@ -27,24 +27,24 @@ get_header();
 
     <!-- Mobile only: Circular hero image at top right corner -->
     <div class="md:hidden absolute top-4 right-4 z-20">
-        <div class="w-40 h-40 rounded-full overflow-hidden shadow-2xl border-4 border-white/30">
+        <div class="w-48 h-48 rounded-full overflow-hidden shadow-2xl border-4 border-its-cyan/50">
             <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/header-hero.webp'); ?>"
                  alt="iTS KANAL Services"
                  class="w-full h-full object-cover object-center">
         </div>
     </div>
 
-    <div class="container-custom relative z-10 py-24 md:py-32 lg:py-40">
+    <div class="container-custom relative z-10 pt-80 pb-24 md:py-32 lg:py-40">
         <!-- Mobile: Dark overlay behind text for WCAG contrast -->
         <div class="md:hidden absolute left-0 top-0 right-0 bottom-0 bg-gradient-to-b from-its-blue-dark/80 via-its-blue-dark/90 to-its-blue-dark/95 -z-10"></div>
 
         <div class="max-w-4xl lg:max-w-2xl">
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-shadow-strong pr-44 md:pr-0">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-shadow-strong">
                 iTS KANAL SERVICES – <br class="hidden md:block">
                 IHR SPEZIALIST FÜR ROHR, <br class="hidden md:block">
                 KANAL- UND FLÄCHENSERVICES
             </h1>
-            <p class="text-xl md:text-2xl mb-8 text-gray-100 text-shadow pr-44 md:pr-0">
+            <p class="text-xl md:text-2xl mb-8 text-gray-100 text-shadow">
                 Europas führender Anbieter von Wasserinfrastrukturlösungen
             </p>
             <div class="flex flex-col sm:flex-row gap-4">

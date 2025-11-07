@@ -11,6 +11,7 @@ module.exports = {
         'its-blue': '#0024BE',
         'its-blue-light': '#597FDE',
         'its-blue-dark': '#001a8f',
+        'its-cyan': '#00BCD4',
       },
       fontFamily: {
         'dm-sans': ['DM Sans', 'sans-serif'],
