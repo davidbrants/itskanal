@@ -13,27 +13,35 @@ get_header();
 ?>
 
 <!-- Hero Section -->
-<section class="hero-section relative bg-gradient-to-br from-its-blue to-its-blue-dark text-white overflow-hidden">
-    <div class="absolute inset-0 opacity-20">
+<section class="hero-section relative bg-its-blue-dark text-white overflow-hidden min-h-[600px] lg:min-h-[700px]">
+    <!-- Background Image - Full visibility -->
+    <div class="absolute inset-0">
         <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/header-hero.webp'); ?>"
              alt="iTS KANAL Services"
-             class="w-full h-full object-cover">
+             class="w-full h-full object-cover object-right">
     </div>
+
+    <!-- Smart gradient overlay: dark on left (text area), transparent on right (kid visible) -->
+    <div class="absolute inset-0 bg-gradient-to-r from-its-blue-dark via-its-blue/80 to-transparent lg:from-its-blue-dark lg:via-its-blue/70 lg:to-transparent"></div>
+
+    <!-- Mobile-specific darker gradient at bottom for text readability -->
+    <div class="absolute inset-0 bg-gradient-to-t from-its-blue-dark/95 via-its-blue/60 to-transparent lg:hidden"></div>
+
     <div class="container-custom relative z-10 py-24 md:py-32 lg:py-40">
-        <div class="max-w-4xl">
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+        <div class="max-w-4xl lg:max-w-2xl">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-shadow-strong">
                 iTS KANAL SERVICES – <br class="hidden md:block">
                 IHR SPEZIALIST FÜR ROHR, <br class="hidden md:block">
                 KANAL- UND FLÄCHENSERVICES
             </h1>
-            <p class="text-xl md:text-2xl mb-8 text-gray-100">
+            <p class="text-xl md:text-2xl mb-8 text-gray-100 text-shadow">
                 Europas führender Anbieter von Wasserinfrastrukturlösungen
             </p>
             <div class="flex flex-col sm:flex-row gap-4">
-                <a href="tel:+41563000078" class="bg-white text-its-blue hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 inline-block text-center">
+                <a href="tel:+41563000078" class="bg-white text-its-blue hover:bg-gray-100 font-semibold py-4 px-8 rounded-lg transition-all duration-300 inline-block text-center shadow-lg">
                     📞 056 300 00 78
                 </a>
-                <button id="appointment-btn-hero" class="bg-its-blue-light hover:bg-opacity-90 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 inline-block border-2 border-white">
+                <button id="appointment-btn-hero" class="bg-its-blue-light hover:bg-opacity-90 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 inline-block border-2 border-white shadow-lg">
                     Termin vereinbaren
                 </button>
             </div>
