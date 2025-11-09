@@ -15,36 +15,36 @@ get_header();
 <!-- Hero Section -->
 <section class="hero-section relative bg-its-blue-dark text-white overflow-hidden min-h-[600px] md:min-h-[650px] lg:min-h-[700px]">
     <!-- Desktop & Tablet: Background Image with gradient overlay -->
-    <div class="hidden md:block absolute inset-0 z-0">
+    <div class="hidden sm:block absolute -top-8 right-0 left-0 bottom-0 z-0">
         <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/header-hero.webp'); ?>"
              alt="iTS KANAL Services"
-             class="w-full h-full object-cover object-right">
+             class="w-full h-full object-cover object-right-top">
         <div class="absolute inset-0 bg-gradient-to-r from-its-blue-dark/95 via-its-blue/60 to-transparent"></div>
     </div>
 
     <!-- Mobile only: Solid gradient background -->
-    <div class="md:hidden absolute inset-0 z-0 bg-gradient-to-br from-its-blue to-its-blue-dark"></div>
+    <div class="sm:hidden absolute inset-0 z-0 bg-gradient-to-br from-its-blue to-its-blue-dark"></div>
 
-    <!-- Mobile only: Circular hero image at top right corner -->
-    <div class="md:hidden absolute top-4 right-4 z-20">
-        <div class="w-48 h-48 rounded-full overflow-hidden shadow-2xl border-4 border-its-cyan/50">
+    <!-- Mobile only: Hero image at top right corner -->
+    <div class="sm:hidden absolute -top-4 right-0 z-20">
+        <div class="w-72 h-72 overflow-hidden">
             <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/header-hero.webp'); ?>"
                  alt="iTS KANAL Services"
-                 class="w-full h-full object-cover object-center">
+                 class="w-full h-full object-cover object-right">
         </div>
     </div>
 
-    <div class="container-custom relative z-10 pt-80 pb-24 md:py-32 lg:py-40">
+    <div class="container-custom relative z-10 pt-64 pb-24 sm:pt-24 sm:pb-32 lg:pt-28 lg:pb-40">
         <!-- Mobile: Dark overlay behind text for WCAG contrast -->
-        <div class="md:hidden absolute left-0 top-0 right-0 bottom-0 bg-gradient-to-b from-its-blue-dark/80 via-its-blue-dark/90 to-its-blue-dark/95 -z-10"></div>
+        <div class="sm:hidden absolute left-0 top-0 right-0 bottom-0 bg-gradient-to-b from-its-blue-dark/80 via-its-blue-dark/90 to-its-blue-dark/95 -z-10"></div>
 
         <div class="max-w-4xl lg:max-w-2xl">
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight text-shadow-strong">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
                 iTS KANAL SERVICES – <br class="hidden md:block">
                 IHR SPEZIALIST FÜR ROHR, <br class="hidden md:block">
                 KANAL- UND FLÄCHENSERVICES
             </h1>
-            <p class="text-xl md:text-2xl mb-8 text-gray-100 text-shadow">
+            <p class="text-xl md:text-2xl mb-8 text-gray-100">
                 Europas führender Anbieter von Wasserinfrastrukturlösungen
             </p>
             <div class="flex flex-col sm:flex-row gap-4">
